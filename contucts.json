@@ -1,0 +1,29 @@
+{
+  "members": [
+    {
+      "Name": "Oliver",
+      "Surname": "Kahn",
+      "Phone": "240-094-35"
+    },
+    {
+      "Name": "Chicharito",
+      "Surname":"Ernandes",
+      "Phone": "860-187-49"
+    },
+    {
+      "Name": "Steven",
+      "Surname":"Gerrard",
+      "Phone": "461-597-11"
+    },
+    {
+      "Name": "Frank",
+      "Surname":"Lampard",
+      "Phone": "298-488-74"
+    },
+    {
+      "Name": "Zlatan",
+      "Surname":"Ibragimovich",
+      "Phone": "974-797-45"
+    }
+  ]
+}

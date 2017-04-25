@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>home work 4</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <link href="styles/style.css" type="text/css" rel="stylesheet" />
+</head>
+<body ng-app="myApp" >﻿
+<h1>Phone book</h1>
+<div ng-controller="customersCtrl">
+    <div>Type to find</div>
+    <input type="text" ng-model="fill">
+    <div>Click on 'Name' or 'Surname' to sort list</div>
+    <table border="1">
+        <th>№</th>
+        <th ng-click = "orderby('Name')">Name</th>
+        <th ng-click = "orderby('Surname')">Surname</th>
+        <th>Phone</th>
+        <tr ng-repeat="x in myData| filter: fill|orderBy: order">
+            <td>
+                {{$index+1}}
+            </td>
+            <td>
+                {{x.Name}}
+            </td>
+            <td>
+                {{x.Surname}}
+            </td>
+            <td>
+                {{x.Phone}}
+            </td>
+        </tr>
+    </table>
+    <div>Fill the fields to add a new contact</div>
+    <form name="myForm">
+        <input type="text" name = "Firstname" ng-model="Firstname" placeholder="Name" required>
+        <input type="text" name="Secondname" ng-model="Secondname" placeholder="Surname" required>
+        <input type="text" name="Phonenumber" ng-model="Phonenumber" placeholder="Phonenumber" required>
+        <button ng-click="addPerson()">Click me!</button>
+    </form>
+    <div class="warn" ng-show="flag">This contact has been existed.</div>
+</div>
+<script src="js/index.js" type="text/javascript"></script>
+</body>
+</html>

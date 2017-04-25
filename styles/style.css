@@ -1,0 +1,35 @@
+﻿h1{
+    background-color: lightskyblue;
+    color: #FFFFFF;
+    text-align: center;
+    width: 100%;
+}
+table{
+    text-align: center;
+    align-content: center;
+    margin: 8px 0px;
+}
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+tr:hover {background-color: #F5F5FF}
+td{
+    padding: 8px;
+}
+input{
+    margin: 8px 0;
+}
+input:focus{
+    background-color:#f5f5f5;
+}
+button{
+    background-color: #5AAC38 ;
+    color:#FFFFFF;
+    border-radius: 6px;
+    border: 0px;
+    padding: 4px;
+}
+.warn{
+    color: #990033;
+}
