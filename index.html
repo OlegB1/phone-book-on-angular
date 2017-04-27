@@ -6,7 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
     <link href="styles/style.css" type="text/css" rel="stylesheet" />
 </head>
-<body ng-app="myApp" >﻿
+<body ng-app="app" >﻿
 <h1>Phone book</h1>
 <div ng-controller="customersCtrl">
     <div>Type to find</div>
@@ -14,32 +14,32 @@
     <div>Click on 'Name' or 'Surname' to sort list</div>
     <table border="1">
         <th>№</th>
-        <th ng-click = "orderby('Name')">Name</th>
-        <th ng-click = "orderby('Surname')">Surname</th>
+        <th ng-click = "orderBy('name')">Name</th>
+        <th ng-click = "orderBy('surname')">Surname</th>
         <th>Phone</th>
-        <tr ng-repeat="x in myData| filter: fill|orderBy: order">
+        <tr ng-repeat="x in persons| filter: fill|orderBy: order">
             <td>
                 {{$index+1}}
             </td>
             <td>
-                {{x.Name}}
+                {{x.name}}
             </td>
             <td>
-                {{x.Surname}}
+                {{x.surname}}
             </td>
             <td>
-                {{x.Phone}}
+                {{x.phone}}
             </td>
         </tr>
     </table>
     <div>Fill the fields to add a new contact</div>
     <form name="myForm">
-        <input type="text" name = "Firstname" ng-model="Firstname" placeholder="Name" required>
-        <input type="text" name="Secondname" ng-model="Secondname" placeholder="Surname" required>
-        <input type="text" name="Phonenumber" ng-model="Phonenumber" placeholder="Phonenumber" required>
+        <input ng-model="firstName" placeholder="Name" required>
+        <input ng-model="secondName" placeholder="Surname" required>
+        <input ng-model="phoneNumber" placeholder="Phonenumber" required>
         <button ng-click="addPerson()">Click me!</button>
     </form>
-    <div class="warn" ng-show="flag">This contact has been existed.</div>
+    <div class="warn" ng-show="isSamePerson">This contact already exists.</div>
 </div>
 <script src="js/index.js" type="text/javascript"></script>
 </body>
